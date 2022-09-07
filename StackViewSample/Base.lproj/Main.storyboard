@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21223" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21204"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StackViewSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NIf-2N-7mC">
+                                <rect key="frame" x="20" y="47" width="388" height="845"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oav-23-tU3" userLabel="Face Container">
+                                        <rect key="frame" x="0.0" y="0.0" width="388" height="300"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="H1c-ZY-mXW">
+                                                <rect key="frame" x="44" y="0.0" width="300" height="300"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="H1c-ZY-mXW" secondAttribute="height" multiplier="1:1" id="ZvE-Zc-DK4"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="H1c-ZY-mXW" firstAttribute="centerY" secondItem="Oav-23-tU3" secondAttribute="centerY" id="5eg-p1-V21"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H1c-ZY-mXW" secondAttribute="trailing" id="N1C-t2-Wyh"/>
+                                            <constraint firstAttribute="height" constant="300" id="Nd5-a5-hxr"/>
+                                            <constraint firstItem="H1c-ZY-mXW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Oav-23-tU3" secondAttribute="leading" id="ai5-ce-8PF"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="H1c-ZY-mXW" secondAttribute="bottom" id="j2u-NW-13e"/>
+                                            <constraint firstAttribute="width" constant="300" id="n2F-aD-Awd"/>
+                                            <constraint firstItem="H1c-ZY-mXW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Oav-23-tU3" secondAttribute="top" id="qT5-ha-Cjf"/>
+                                            <constraint firstItem="H1c-ZY-mXW" firstAttribute="centerX" secondItem="Oav-23-tU3" secondAttribute="centerX" id="uUe-Xv-VtK"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Nd5-a5-hxr"/>
+                                                <exclude reference="n2F-aD-Awd"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Nd5-a5-hxr"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="n2F-aD-Awd"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tTm-hx-MRX" userLabel="Text Stack View">
+                                        <rect key="frame" x="0.0" y="320" width="388" height="525"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="おなまえ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZI-Xx-1nw">
+                                                <rect key="frame" x="0.0" y="0.0" width="388" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="しょぞく" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9a-Ut-Zbl">
+                                                <rect key="frame" x="0.0" y="34" width="388" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxH-cs-QWE">
+                                                <rect key="frame" x="0.0" y="68" width="388" height="71.666666666666686"/>
+                                                <string key="text">ここに自己紹介を書きます。
+複数行書くことができます。
+おわり。</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lg4-Tc-WVM" userLabel="Spacing">
+                                                <rect key="frame" x="0.0" y="149.6666666666666" width="388" height="375.33333333333326"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <variation key="widthClass=regular" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NIf-2N-7mC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Imn-JR-10X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NIf-2N-7mC" secondAttribute="bottom" id="J9H-wi-GDJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NIf-2N-7mC" secondAttribute="trailing" constant="20" id="M5n-pQ-HEH"/>
+                            <constraint firstItem="NIf-2N-7mC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gXZ-P7-hae"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-28"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="face" width="1000" height="1000"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
